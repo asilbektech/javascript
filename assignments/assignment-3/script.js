@@ -1,0 +1,11 @@
+console.log(5);
+var num1 = 5;
+var num2 = 10;
+var sum = num1 + num2;
+console.log(sum);
+var subtract = num1 - num2;
+console.log(subtract);
+var multiply = num1 * num2;
+console.log(multiply);
+var divide = num1 / num2;
+console.log(divide);
