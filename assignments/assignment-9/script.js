@@ -26,6 +26,10 @@ if (randomNumber2 === 1) {
             "Bob" +
             ", sending you smiles for every moment of your special day."
     );
+} else if (randomNumber2 === 3) {
+    console.log(
+        "Dear " + "Mike" + ", have a wonderful time and a very happy day!"
+    );
 } else {
     console.log(
         "Dear " +
