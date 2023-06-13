@@ -61,5 +61,10 @@ function threeStrings(str1, str2, str3) {
 console.log(threeStrings("book", "school", "bookschool")); // true
 console.log(threeStrings("book", "school", "book school")); // false
 
-// Create a function that takes the string and a number and checks if the number of string is twice a number.
-// "house", 7 5 should be equal to 7*2 5 ===14 // false
+function addAtEnd(arr1, value) {
+    return arr1.push(value);
+}
+
+var arr1 = [100, 200, 300];
+var value = arr1.push(400);
+console.log(addAtEnd(arr1));
