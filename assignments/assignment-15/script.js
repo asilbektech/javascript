@@ -20,7 +20,24 @@ function divisibleBySeven(start, end) {
 
 console.log(divisibleBySeven(21));
 
-// part3
+// // while loop
+
+function divisibleBySeven(start, end) {
+    var count = 0;
+    var i = start;
+
+    while (i <= end) {
+        if (i % 7 === 0) {
+            count++;
+        }
+        i++;
+    }
+    return count;
+}
+
+console.log(divisibleBySeven(1, 20));
+
+// // part3
 
 function numbersDivisibleBythreeandfive(start, end) {
     var counter = 0;
@@ -34,7 +51,24 @@ function numbersDivisibleBythreeandfive(start, end) {
 
 console.log(numbersDivisibleBythreeandfive(30));
 
-// part4
+// while loop
+
+function numbersDivisibleBythreeandfive(start, end) {
+    var counter = 0;
+    var i = start;
+
+    while (i <= end) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            counter++;
+        }
+        i++;
+    }
+    return counter;
+}
+
+console.log(numbersDivisibleBythreeandfive(1, 30));
+
+// // part4
 
 function sameRange(start, end) {
     var count = 0;
@@ -47,12 +81,32 @@ function sameRange(start, end) {
 
 console.log(sameRange(10, 20));
 
+// while loop
+
+function sameRange(start, end) {
+    var count = 0;
+    var i = start;
+
+    while (i <= end) {
+        if (i * i >= start && i * i <= end) {
+            count++;
+        }
+        i++;
+    }
+    return count;
+}
+
+console.log(sameRange(10, 20));
+
 // part5
 
 function divisibleBythreeandfive(start, end) {
     var count = 0;
     for (var i = start; i <= end; i++) {
-        if ((i % 3 === 0 && i % 5 !== 0) || (i % 3 !== 0 && i % 5 === 0)) {
+        if (
+            (num % 3 === 0 && num % 5 !== 0) ||
+            (num % 3 !== 0 && num % 5 === 0)
+        ) {
             count++;
         }
     }
@@ -60,3 +114,20 @@ function divisibleBythreeandfive(start, end) {
 }
 
 console.log(divisibleBythreeandfive(1, 30));
+
+// while loop
+
+function divisibleBythreeandfive(start, end) {
+    var count = 0;
+    var i = start;
+
+    while (i <= end) {
+        if ((i % 3 === 0 && i % 5 !== 0) || (i % 3 !== 0 && i % 5 === 0)) {
+            count++;
+        }
+        i++;
+    }
+    return count;
+}
+
+console.log(divisibleBythreeandfive(10, 30));
