@@ -15,7 +15,9 @@ Make sure students validate input types, handle error conditions, and remember t
 function evenIndexSumString(string) {
     var sum = 0;
     for (var i = 0; i < string.length; i += 2) {
-        sum += parseInt(string[i]) || 0;
+        if (i % 2 === 0) {
+            sum = sum + parseInt(string[i]);
+        }
     }
     return sum;
 }
