@@ -28,9 +28,15 @@ console.log(splitSentenceIntoWords("Hello World from JavaScript")); // [ 'Hello'
 // 4. Create a function createCamelCase(str) that takes a string str as an argument. The string contains words separated by spaces. The function should return a camelCase version of the string.
 
 function createCamelCase(str) {
-    let words = str.split(" ");
-    let camelCase = words[0];
-    return words; // not done yet
+    let strParts = str.split(" ");
+    let firstPart = strParts[0];
+    let secondPart = strParts[1];
+
+    return (
+        firstPart.toLowerCase() +
+        secondPart[0].toUpperCase() +
+        secondPart.slice(1).toLowerCase
+    );
 }
 
 console.log(createCamelCase("first name"));
@@ -60,13 +66,22 @@ console.log(replaceSpacesWithUnderscore("Hello world")); // Hello_world
 
 // 7. Create a function splitByMultipleCharacters(str, characters) that takes a string str and an array of characters as arguments. This function should split the string each time one of the characters in the array is encountered.
 
-function splitByMultipleCharacters(str, characters) {
-    let words = str.split("e");
+function splitByMultipleCharacters(str, chars) {
+    for (var i = 0; i < chars.length; i++) {
+        var char = chars[i];
+        str = str.split(char).join("&");
+    }
 
-    return words;
+    return str.split("&");
 }
 
 console.log(splitByMultipleCharacters("red,green,blue", [",", "e"])); // [ 'r', 'd,gr', '', 'n,blu', '' ]
+console.log(splitByMultipleCharacters(" pple or nge b n n ", ["-", "a"]));
+// [ 'apple', 'orange', 'banana' ]
+// Example Input: ("apple-orange-banana", ["-", "a"])
+// Example Output: ["", "pple", "or", "nge", "b", "n", "n", ""]
+// Example Input: ("red,green,blue", [",", "e"])
+// Example Output: ["r", "d", "gr", "", "n", "blu", ""]
 
 // 8. Create a function countWordsInSentence(sentence) that takes a sentence as an argument and returns the number of words in the sentence. Assume words are separated by a single space.
 
@@ -90,11 +105,16 @@ console.log(swapFirstAndLastName("John Doe")); // Doe,John
 
 // 10. Create a function createHashtag(str) that takes a string str as an argument and returns a hashtag version of it. Words should be joined with no spaces and every word should start with a capital letter.
 
-// NOT DONE YET
-
 function createHashtag(str) {
-    let hashtag = str.split(" ").join("#");
-    return hashtag;
+    let arr = str.split(" ");
+    let arrWithHash = ["#"];
+    for (var i = 0; i < arr.length; i++) {
+        var word = arr[i];
+        var capitalizedWord = word[0].toUpperCase() + word.slice(1);
+        arrWithHash.push(capitalizedWord);
+    }
+    return arrWithHash.join("");
 }
 
 console.log(createHashtag("hello world"));
+console.log(createHashtag("OpenAI is awesome"));
