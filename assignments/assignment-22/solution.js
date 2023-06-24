@@ -29,7 +29,7 @@ console.log(movie["rating"]); // 13
 
 // task 3
 
-console.log(movie.produser); // undefined because we don't have produser propertie
+console.log(movie.produser); // undefined because we don't have produser property
 console.log(movie["produser"]);
 
 // task 4
@@ -50,8 +50,8 @@ console.log(movie["boxOffice"]); // 480 million
 
 delete movie.boxOffice;
 
-console.log(movie.boxOffice); // undefined because we deleted boxOffice propertie
-console.log(movie["boxOffice"]); // undefined because we deleted boxOffice propertie
+console.log(movie.boxOffice); // undefined because we deleted boxOffice property
+console.log(movie["boxOffice"]); // undefined because we deleted boxOffice property
 
 function extraChallenge(movie) {
     console.log(

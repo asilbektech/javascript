@@ -66,5 +66,5 @@ function someFunction() {
 }
 
 someFunction();
-
+ 
 console.log(myVar); // what does this output? // I'm global! (we console.log outside of the function that's why it prints the myVar the one from outside! )
